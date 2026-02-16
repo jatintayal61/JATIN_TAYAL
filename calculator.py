@@ -27,8 +27,8 @@ def calculate(s: str) -> int:
             elif first_operation == "/":
                 res -= last
                 res += int(last/ first)
-                prev = int(last / first)
-            cur = 0
+                last = int(last / first)
+            first = 0
         elif first_char in "+-*/":
             first_operation = first_char
         i += 1
